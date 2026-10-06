@@ -8,7 +8,7 @@
 <meta name="description" content="WeGo Sports storefront mockup: running, football, basketball, tennis, training, cycling and outdoor gear.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 /* Layout: sticky shop header → running-track hero (lane lines + lane numbers) → benefits strip → 8-up sport rail → filterable 4-up product grid → split promo blocks → club tier ladder → gear guides → newsletter footer */
 :root{
@@ -22,7 +22,7 @@
   --art-line:#0D1726;
   --ok:#137A3F;
   --shadow:0 1px 2px rgba(13,23,38,.06),0 10px 30px rgba(13,23,38,.10);
-  --f-display:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --f-display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
   --r-sm:6px; --r-md:12px; --r-lg:20px;
@@ -60,8 +60,8 @@
 
 *,*::before,*::after{box-sizing:border-box}
 html:has(dialog[open]){overflow:hidden}
-body{background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{margin:0;font-family:var(--f-display);text-wrap:balance;line-height:1}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--f-body);font-variation-settings:"wdth" 112;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--f-display);text-wrap:balance;line-height:1.05;letter-spacing:-.01em}
 p{margin:0}
 a{color:inherit}
 button{font:inherit;color:inherit}
@@ -75,7 +75,7 @@ button{font:inherit;color:inherit}
 .eyebrow,.mono{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:2px solid transparent;font-family:var(--f-display);font-weight:700;font-size:1.125rem;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .15s var(--ease);touch-action:manipulation}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:2px solid transparent;font-family:var(--f-display);font-weight:800;font-size:.9375rem;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .15s var(--ease);touch-action:manipulation}
 .btn:active{transform:scale(.97)}
 .btn-go{background:var(--go);color:var(--on-go)}
 .btn-go:hover{background:var(--go-ink)}
@@ -105,7 +105,7 @@ button{font:inherit;color:inherit}
 .logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
 .logo svg{width:40px;height:28px}
 .logo-word{display:flex;flex-direction:column;line-height:.85}
-.logo-word b{font:italic 800 1.875rem/1 var(--f-display);letter-spacing:.01em}
+.logo-word b{font:900 1.5rem/1 var(--f-display);letter-spacing:-.01em}
 .logo-word small{font:600 .6875rem/1 var(--f-mono);letter-spacing:.32em;color:var(--ink-2);margin-top:2px}
 .search{position:relative;max-width:560px;width:100%;justify-self:center}
 .search-field{display:flex;align-items:center;gap:10px;height:48px;padding:0 6px 0 16px;border-radius:999px;background:var(--surface);border:2px solid transparent;transition:border-color .2s var(--ease)}
@@ -113,7 +113,7 @@ button{font:inherit;color:inherit}
 .search-field .i{color:var(--ink-2)}
 .search input{flex:1;min-width:0;height:100%;border:0;background:transparent;color:var(--ink);font:500 1rem var(--f-body);outline:none}
 .search input::placeholder{color:var(--ink-2)}
-.search-go{height:36px;padding:0 16px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:700 .9375rem var(--f-display);letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
+.search-go{height:36px;padding:0 16px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:800 .8125rem var(--f-display);letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
 .search-pop{position:absolute;left:0;right:0;top:calc(100% + 8px);padding:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);display:none}
 .search:focus-within .search-pop{display:block}
 .search-pop p{color:var(--ink-2);margin-bottom:10px}
@@ -123,7 +123,7 @@ button{font:inherit;color:inherit}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .header-actions{display:flex;gap:4px}
 .main-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0 0 6px;flex-wrap:wrap}
-.main-nav a,.main-nav button{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:0;background:none;border-radius:999px;font:700 1.0625rem var(--f-display);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease)}
+.main-nav a,.main-nav button{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border:0;background:none;border-radius:999px;font:800 .875rem var(--f-display);letter-spacing:.03em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease)}
 .main-nav a:hover,.main-nav button:hover{background:var(--surface)}
 .main-nav .sale{color:var(--go-ink)}
 .main-nav .sale::after{content:"";width:8px;height:8px;border-radius:2px;margin-left:6px;background:var(--volt);transform:skewX(-14deg)}
@@ -142,12 +142,12 @@ button{font:inherit;color:inherit}
 .hero-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--go-ink);font-weight:500}
 .hero .eyebrow::before{content:"";width:28px;height:3px;background:var(--go)}
-.hero h1{font-size:clamp(2.75rem,6.2vw,5.75rem);font-weight:800;font-style:italic;text-transform:uppercase;line-height:.9;letter-spacing:-.005em}
+.hero h1{font-size:clamp(2.125rem,4.4vw,4rem);font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:-.015em}
 .hero h1 em{font-style:inherit;color:var(--go)}
 .lede{font-size:1.125rem;color:var(--ink-2);max-width:46ch}
 .spec-chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
 .spec-chips li{display:flex;flex-direction:column;padding:10px 16px;border-left:3px solid var(--go);background:var(--surface);border-radius:0 var(--r-sm) var(--r-sm) 0}
-.spec-chips b{font:800 1.75rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.spec-chips b{font:800 1.375rem/1 var(--f-display);font-variant-numeric:tabular-nums}
 .spec-chips span{font:500 .75rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
 .hero-art{position:relative;aspect-ratio:6/5;max-width:100%;border-radius:var(--r-lg);overflow:hidden;background:var(--go);isolation:isolate}
@@ -157,11 +157,11 @@ button{font:inherit;color:inherit}
 @keyframes stride{from{transform:translateX(-14%) rotate(-14deg)}to{transform:rotate(-8deg)}}
 .sticker{position:absolute;top:6%;right:5%;width:clamp(84px,14vw,112px);aspect-ratio:1;border-radius:50%;background:var(--volt);color:var(--on-volt);display:grid;place-content:center;text-align:center;transform:rotate(12deg);box-shadow:0 6px 16px rgba(0,0,0,.2)}
 .sticker small{font:500 .6875rem var(--f-mono);letter-spacing:.1em}
-.sticker b{font:italic 800 clamp(1.5rem,3vw,2rem)/1 var(--f-display)}
+.sticker b{font:900 clamp(1.25rem,2.4vw,1.625rem)/1 var(--f-display)}
 .bib{position:absolute;left:5%;bottom:6%;background:#FFFFFF;color:#0D1726;border-radius:var(--r-sm);padding:10px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
-.bib .num{font:italic 800 2.25rem/1 var(--f-display);color:#D93A1A}
+.bib .num{font:900 1.75rem/1 var(--f-display);color:#D93A1A}
 .bib .mono{display:block;color:#4A5566;font-size:.6875rem}
-.bib strong{font:700 1rem var(--f-display);letter-spacing:.03em;text-transform:uppercase}
+.bib strong{font:800 .875rem var(--f-display);letter-spacing:.02em;text-transform:uppercase}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-art{aspect-ratio:4/3}}
 
 /* Benefits */
@@ -176,7 +176,7 @@ button{font:inherit;color:inherit}
 /* Section heads */
 .section{padding-block:clamp(40px,6vw,72px)}
 .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px}
-.sec-head h2{font-size:clamp(2rem,3.6vw,2.75rem);font-weight:800;font-style:italic;text-transform:uppercase}
+.sec-head h2{font-size:clamp(1.625rem,2.8vw,2.125rem);font-weight:900;text-transform:uppercase}
 .sec-head p{color:var(--ink-2);margin-top:6px}
 .text-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;color:var(--ink);text-decoration:none;border:0;background:none;cursor:pointer;padding:0}
 .text-link:hover{color:var(--go-ink)}
@@ -187,7 +187,7 @@ button{font:inherit;color:inherit}
 .sports{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
 .sport{display:flex;flex-direction:column;align-items:flex-start;gap:20px;width:100%;height:100%;padding:16px;border-radius:var(--r-md);border:0;background:var(--surface);text-align:left;cursor:pointer;transition:background-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
 .sport .i{width:32px;height:32px;stroke-width:1.75}
-.sport b{display:block;font:800 1.25rem/1 var(--f-display);font-style:italic;text-transform:uppercase}
+.sport b{display:block;font:800 1rem/1.1 var(--f-display);text-transform:uppercase}
 .sport small{display:block;color:var(--ink-2);font-size:.8125rem;margin-top:4px;font-variant-numeric:tabular-nums;transition:color .2s var(--ease)}
 .sport:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
 .sport:hover small{color:inherit}
@@ -205,10 +205,10 @@ button{font:inherit;color:inherit}
 .media-btn{position:absolute;inset:0;width:100%;height:100%;border:0;background:none;padding:12%;cursor:pointer;display:grid;place-items:center}
 .media-btn svg{width:100%;height:auto;transition:transform .3s var(--ease)}
 .card:hover .media-btn svg{transform:scale(1.05) rotate(-2deg)}
-.qv-hint{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:center;padding:10px;border-radius:999px;background:var(--card);color:var(--ink);font:700 .9375rem var(--f-display);letter-spacing:.06em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:opacity .2s var(--ease),transform .2s var(--ease);pointer-events:none}
+.qv-hint{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:center;padding:10px;border-radius:999px;background:var(--card);color:var(--ink);font:800 .8125rem var(--f-display);letter-spacing:.04em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:opacity .2s var(--ease),transform .2s var(--ease);pointer-events:none}
 .card:hover .qv-hint,.media-btn:focus-visible+.qv-hint{opacity:1;transform:none}
 @media (hover:none){.qv-hint{display:none}}
-.badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 10px;border-radius:4px;font:700 .8125rem/1.3 var(--f-display);letter-spacing:.06em;text-transform:uppercase;pointer-events:none}
+.badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 10px;border-radius:4px;font:800 .6875rem/1.4 var(--f-display);letter-spacing:.04em;text-transform:uppercase;pointer-events:none}
 .badge-hot{background:var(--ink);color:var(--bg)}
 .badge-new{background:var(--lane);color:#FFFFFF}
 .badge-sale{background:var(--volt);color:var(--on-volt)}
@@ -217,7 +217,7 @@ button{font:inherit;color:inherit}
 .wish[aria-pressed="true"] .i{fill:var(--go);color:var(--go)}
 .card-body{display:flex;flex-direction:column;gap:6px;padding-top:12px;flex:1}
 .card-cat{font:500 .75rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
-.card h3{font-size:1.375rem;font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+.card h3{font-size:1.0625rem;font-weight:800;text-transform:uppercase;letter-spacing:0}
 .card h3 button{border:0;background:none;padding:0;text-align:left;cursor:pointer;font:inherit;text-transform:inherit;letter-spacing:inherit}
 .card h3 button:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 .rating{display:flex;align-items:center;gap:6px;font-size:.875rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
@@ -226,14 +226,14 @@ button{font:inherit;color:inherit}
 .swatches{display:flex;gap:6px;align-items:center}
 .swatches i{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line)}
 .price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:6px}
-.price{font:800 1.5rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.price{font:800 1.25rem/1 var(--f-display);font-variant-numeric:tabular-nums}
 .price.sale{color:var(--go-ink)}
-.was{font:500 1rem var(--f-display);color:var(--ink-2);text-decoration:line-through;margin-left:6px}
-.add-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 .9375rem var(--f-display);letter-spacing:.04em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background-color .2s var(--ease),color .2s var(--ease)}
+.was{font:500 .875rem var(--f-display);color:var(--ink-2);text-decoration:line-through;margin-left:6px}
+.add-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:800 .8125rem var(--f-display);letter-spacing:.03em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background-color .2s var(--ease),color .2s var(--ease)}
 .add-btn:hover{background:var(--ink);color:var(--bg)}
-@media (max-width:520px){.add-btn span{display:none}.add-btn{width:44px;padding:0;justify-content:center}.card h3{font-size:1.125rem}.price{font-size:1.25rem}}
+@media (max-width:520px){.add-btn span{display:none}.add-btn{width:44px;padding:0;justify-content:center}.card h3{font-size:.9375rem}.price{font-size:1.125rem}}
 .empty{grid-column:1/-1;padding:48px 24px;text-align:center;border:2px dashed var(--line);border-radius:var(--r-md);display:flex;flex-direction:column;align-items:center;gap:12px}
-.empty h3{font-size:1.75rem;text-transform:uppercase}
+.empty h3{font-size:1.375rem;text-transform:uppercase}
 .empty p{color:var(--ink-2)}
 
 /* Promo blocks */
@@ -244,7 +244,7 @@ button{font:inherit;color:inherit}
 .promo-b{background:var(--volt);color:var(--on-volt)}
 .promo-b p{color:#3A4352}
 .promo-copy{display:flex;flex-direction:column;align-items:flex-start;gap:14px;min-width:0}
-.promo h3{font-size:clamp(2rem,3.4vw,3rem);font-weight:800;font-style:italic;text-transform:uppercase;line-height:.92}
+.promo h3{font-size:clamp(1.625rem,2.6vw,2.25rem);font-weight:900;text-transform:uppercase;line-height:1}
 .promo .mono{opacity:.85}
 .promo-art{position:relative;min-width:0}
 .promo-art svg{width:100%;height:auto;display:block}
@@ -255,7 +255,7 @@ button{font:inherit;color:inherit}
 
 /* Club */
 .club{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(24px,4vw,48px);border-radius:var(--r-lg);background:var(--surface)}
-.club h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;font-style:italic;text-transform:uppercase;margin-block:10px 12px}
+.club h2{font-size:clamp(1.625rem,2.8vw,2.25rem);font-weight:900;text-transform:uppercase;margin-block:10px 12px}
 .club-copy p{color:var(--ink-2);max-width:44ch}
 .club-copy .btn{margin-top:20px}
 .club-copy .eyebrow{color:var(--go-ink)}
@@ -264,7 +264,7 @@ button{font:inherit;color:inherit}
 .tier:nth-child(2){border-top-color:var(--lane)}
 .tier:nth-child(3){border-top-color:var(--go)}
 .tier .mono{color:var(--ink-2)}
-.tier h3{font-size:1.625rem;font-weight:800;font-style:italic;text-transform:uppercase}
+.tier h3{font-size:1.25rem;font-weight:900;text-transform:uppercase}
 .tier ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:.9375rem;display:flex;flex-direction:column;gap:4px}
 @media (max-width:900px){.club{grid-template-columns:1fr}}
 @media (max-width:640px){.tiers{grid-template-columns:1fr}}
@@ -275,17 +275,17 @@ button{font:inherit;color:inherit}
 .guide a:hover{border-color:var(--ink)}
 .guide-top{height:120px;display:flex;align-items:flex-end;justify-content:space-between;padding:16px}
 .guide-top .i{width:40px;height:40px;stroke-width:1.5}
-.guide-top .big{font:italic 800 3rem/1 var(--f-display);opacity:.9;font-variant-numeric:tabular-nums}
+.guide-top .big{font:900 2.125rem/1 var(--f-display);opacity:.9;font-variant-numeric:tabular-nums}
 .guide-body{display:flex;flex-direction:column;gap:8px;padding:16px 16px 20px}
 .guide-body .mono{color:var(--ink-2)}
-.guide-body h3{font-size:1.5rem;font-weight:700;line-height:1.05}
+.guide-body h3{font-size:1.1875rem;font-weight:800;line-height:1.2;letter-spacing:0}
 .guide-body p{color:var(--ink-2);font-size:.9375rem}
 @media (max-width:900px){.guides{grid-template-columns:1fr}}
 
 /* Footer */
 .footer{margin-top:clamp(40px,6vw,72px);background:var(--navy);color:var(--on-navy)}
 .news{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding-block:40px;border-bottom:1px solid rgba(255,255,255,.12)}
-.news h2{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;font-style:italic;text-transform:uppercase}
+.news h2{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:900;text-transform:uppercase}
 .news p{color:var(--on-navy-2);margin-top:8px}
 .news form{display:flex;flex-direction:column;gap:6px}
 .news label{font-weight:600;font-size:.9375rem}
@@ -300,7 +300,7 @@ button{font:inherit;color:inherit}
 .news .btn-go:hover{background:#B92F12}
 @media (max-width:860px){.news{grid-template-columns:1fr}}
 .foot-cols{display:grid;grid-template-columns:1.4fr repeat(3,minmax(0,1fr));gap:24px;padding-block:40px}
-.foot-cols h3{font:700 1rem var(--f-display);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;color:var(--on-navy)}
+.foot-cols h3{font:800 .875rem var(--f-display);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;color:var(--on-navy)}
 .foot-cols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
 .foot-cols a{display:inline-flex;min-height:36px;align-items:center;color:var(--on-navy-2);text-decoration:none}
 .foot-cols a:hover{color:var(--on-navy);text-decoration:underline}
@@ -321,7 +321,7 @@ dialog::backdrop{background:rgba(5,10,18,.6)}
 .qv-media{position:relative;display:grid;place-items:center;padding:10%;min-height:320px}
 .qv-media svg{width:100%;height:auto}
 .qv-info{display:flex;flex-direction:column;gap:16px;padding:clamp(20px,3vw,36px)}
-.qv-info h2{font-size:clamp(2rem,3.6vw,2.75rem);font-weight:800;font-style:italic;text-transform:uppercase}
+.qv-info h2{font-size:clamp(1.625rem,2.8vw,2.125rem);font-weight:900;text-transform:uppercase}
 .qv-info .sub{color:var(--ink-2)}
 .qv-close{position:absolute;top:10px;right:10px;z-index:2;background:var(--card)}
 .qv-close:hover{background:var(--surface)}
@@ -353,7 +353,7 @@ legend .text-link{min-height:0;font-weight:500;font-size:.875rem;color:var(--ink
 .drawer-left[open]{animation-name:slide-l}
 @keyframes slide-l{from{transform:translateX(-100%)}}
 .drawer-head{display:flex;align-items:center;justify-content:space-between;padding:16px 16px 16px 24px;border-bottom:1px solid var(--line)}
-.drawer-head h2{font-size:1.75rem;font-weight:800;font-style:italic;text-transform:uppercase}
+.drawer-head h2{font-size:1.375rem;font-weight:900;text-transform:uppercase}
 .drawer-body{flex:1;overflow:auto;padding:16px 24px}
 .drawer-foot{padding:16px 24px calc(20px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
 .ship-meter{padding:14px 16px;border-radius:var(--r-md);background:var(--surface);margin-bottom:16px}
@@ -366,9 +366,9 @@ legend .text-link{min-height:0;font-weight:500;font-size:.875rem;color:var(--ink
 .li{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:14px;padding-block:14px;border-bottom:1px solid var(--line)}
 .li-art{border-radius:var(--r-sm);aspect-ratio:1;max-width:100%;display:grid;place-items:center;padding:8px}
 .li-art svg{width:100%;height:auto}
-.li h3{font-size:1.125rem;font-weight:700;text-transform:uppercase}
+.li h3{font-size:.9375rem;font-weight:800;text-transform:uppercase}
 .li .meta{font-size:.875rem;color:var(--ink-2)}
-.li-price{font:700 1.125rem var(--f-display);font-variant-numeric:tabular-nums;text-align:right}
+.li-price{font:800 1rem var(--f-display);font-variant-numeric:tabular-nums;text-align:right}
 .qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;margin-top:8px}
 .qty button{width:36px;height:36px;border:0;background:none;border-radius:999px;cursor:pointer;display:grid;place-items:center}
 .qty button:hover{background:var(--surface)}
@@ -376,19 +376,19 @@ legend .text-link{min-height:0;font-weight:500;font-size:.875rem;color:var(--ink
 .remove{display:block;margin-top:8px;margin-left:auto;border:0;background:none;color:var(--ink-2);text-decoration:underline;cursor:pointer;font-size:.875rem;min-height:32px}
 .remove:hover{color:var(--go-ink)}
 .totals{display:flex;justify-content:space-between;font-size:1.0625rem}
-.totals b{font:800 1.5rem var(--f-display);font-variant-numeric:tabular-nums}
+.totals b{font:800 1.25rem var(--f-display);font-variant-numeric:tabular-nums}
 .foot-note{font-size:.8125rem;color:var(--ink-2);text-align:center}
 .bag-empty{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:48px 8px;color:var(--ink-2)}
 .bag-empty .i{width:48px;height:48px;stroke-width:1.5;color:var(--ink)}
 .menu-list{list-style:none;margin:0;padding:0}
-.menu-list button,.menu-list a{display:flex;width:100%;align-items:center;justify-content:space-between;min-height:56px;border:0;border-bottom:1px solid var(--line);background:none;font:800 1.5rem var(--f-display);font-style:italic;text-transform:uppercase;text-decoration:none;cursor:pointer;padding:0}
+.menu-list button,.menu-list a{display:flex;width:100%;align-items:center;justify-content:space-between;min-height:56px;border:0;border-bottom:1px solid var(--line);background:none;font:800 1.125rem var(--f-display);text-transform:uppercase;text-decoration:none;cursor:pointer;padding:0}
 .menu-list .sale{color:var(--go-ink)}
 
 /* Toast */
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;transform:translate(-50%,20px);opacity:0;pointer-events:none;display:flex;align-items:center;gap:14px;width:max-content;max-width:calc(100% - 32px);padding:12px 12px 12px 18px;border-radius:999px;background:var(--ink);color:var(--bg);box-shadow:var(--shadow);transition:opacity .2s var(--ease),transform .25s var(--ease)}
 .toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
 .toast .i{color:var(--volt)}
-.toast button{min-height:36px;padding:0 14px;border-radius:999px;border:0;background:var(--bg);color:var(--ink);font:700 .875rem var(--f-display);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.toast button{min-height:36px;padding:0 14px;border-radius:999px;border:0;background:var(--bg);color:var(--ink);font:800 .75rem var(--f-display);letter-spacing:.04em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -794,7 +794,7 @@ legend .text-link{min-height:0;font-weight:500;font-size:.875rem;color:var(--ink
     s += `<path d="M0 392H600" stroke="#FFFFFF" stroke-width="10" opacity=".9"/>`;
     for (let i = 0; i < xs.length - 1; i++) {
       const mid = (xs[i] + xs[i + 1]) / 2;
-      if (mid > 0 && mid < 600) s += `<text x="${mid}" y="472" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="800" font-style="italic" font-size="72" fill="#FFFFFF" opacity="${i === 4 ? 1 : .55}">${i}</text>`;
+      if (mid > 0 && mid < 600) s += `<text x="${mid}" y="472" text-anchor="middle" font-family="Archivo, Arial Black, sans-serif" font-weight="900" font-size="64" fill="#FFFFFF" opacity="${i === 4 ? 1 : .55}">${i}</text>`;
     }
     lanes.innerHTML = `<rect width="600" height="500" fill="var(--go)"/>` + s;
     $('#heroShoe').innerHTML = ART.shoe('#F4F6FA', '#C9E21B');
@@ -887,7 +887,7 @@ legend .text-link{min-height:0;font-weight:500;font-size:.875rem;color:var(--ink
             <p class="sub">${p.sub}</p>
           </div>
           <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-            <span><span class="price ${p.was ? 'sale' : ''}" style="font-size:2rem">${money(p.price)}</span>${p.was ? `<span class="was">${money(p.was)}</span>` : ''}</span>
+            <span><span class="price ${p.was ? 'sale' : ''}" style="font-size:1.625rem">${money(p.price)}</span>${p.was ? `<span class="was">${money(p.was)}</span>` : ''}</span>
             ${stars(p)}
           </div>
           <div class="keywords" aria-label="What reviewers mention">${p.keys.map(k => `<span>${k}</span>`).join('')}</div>
